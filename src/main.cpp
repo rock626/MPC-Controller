@@ -103,9 +103,9 @@ int main() {
           steer_value = -1*steer_value;
           double latency = 0.1;
          
-          psi = psi + v * steer_value/Lf*latency;
           px = px + v*cos(psi)*latency;
           py= py+ v * sin(psi) * latency;
+          psi = psi + v * steer_value/Lf*latency;
           v =  v + throttle_value * latency;
 
           //transfer all points on the trajectory to car's coordinate system
